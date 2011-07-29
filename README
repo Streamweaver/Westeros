@@ -1,0 +1,21 @@
+================
+Project Overview
+================
+
+A small Django application for playing around with information related to 
+various aspects of Westeros, the world created by George RR Martin for his 
+Song of Ice and Fire series.
+
+============
+Applications
+============
+
+------
+Houses
+------
+
+Helps with listing and creating stats for Nobles Houses as detailed in the game
+"A Song of Ice and Fire" RGP by Green Ronin Publishing.  While this application
+helps with the creation of noble houses you'll have to buy the game to 
+understand what you're looking at. 
+
