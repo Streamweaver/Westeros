@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <title>
-    {% block page-title %}Flagon with the Dragon {% block page-subtitle %} - Home{% endblock %}{% endblock %}
+    {% block page-title %}Westeros {% block page-subtitle %} - Home{% endblock %}{% endblock %}
   </title>
 
   {% block page-head %}
@@ -24,36 +24,13 @@
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style/html-elements.css" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style/layout.css" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style/local.css" />
-
-    {% comment %} SyntaxHighlighter styles {% endcomment %}
-    <link href="{{ STATIC_URL }}js/sh/styles/shCore.css" rel="stylesheet" type="text/css" />
-    <link href="{{ STATIC_URL }}js/sh/styles/shThemeEmacs.css" rel="stylesheet" type="text/css" />
-
-  {% endblock %}
+    {% endblock %}
 
     {% block scripts %}
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
-        {% comment %} Script Includes for SyntaxHighlighter {% endcomment %}
-        <script type="text/javascript" src="{{ STATIC_URL }}js/sh/scripts/shCore.js"></script>
-        <script type="text/javascript" src="{{ STATIC_URL }}js/sh/scripts/shAutoloader.js"></script>
     {% endblock %}
 
-    {% block google_analytics %}
-        <script type="text/javascript">
-
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-16216162-1']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
-        </script>
-    {% endblock %}
 </head>
 
 <body>
@@ -62,8 +39,8 @@
 
     {% comment %}Skip-To links are for accessabilty by screenreaders and such.  {% endcomment %}
     <div id="skip-to">
-        <a href="site_base.xhtml#navigation">Skip to Navigation</a>
-        <a href="site_base.xhtml#content">Skip to Content</a>
+        <a href="#navigation">Skip to Navigation</a>
+        <a href="#content">Skip to Content</a>
     </div> <!-- /#skip-to -->
 
     <div id="header">
@@ -76,7 +53,7 @@
 	{% block navbar %}
 	<div id="navbar">
 		<div id="navbar-inner">
-			<a href="site_base.xhtml#navigation"></a>
+			<a href="#navigation"></a>
 			<ul id="navlinks">
 			{% block navlinks %}
 				<li><a href="{% url site-index %}">Home</a></li>
