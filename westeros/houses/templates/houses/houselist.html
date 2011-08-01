@@ -1,0 +1,13 @@
+{% extends "site_base.html" %}
+
+{% block page-subtitle %} - Houses{% endblock %}
+
+{% block content-body %}
+    {% for house in house_list %}
+        <div id="house-{{ house.id }}" class="object_list_block">
+        <a href="">{{ house.name }}</a> of <a href="">{{ house.realm.name }}</a>
+        </div>
+    {% empty %}
+        <div class="emptylist">No Houses Found</div>
+    {% endfor %}
+{% endblock %}

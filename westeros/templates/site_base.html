@@ -15,9 +15,7 @@
             {% for link in alt_links %}
             <link rel="alternate" type="{{ link.type }}" title="{{ link.title }}" href="{{ link.href }}" />
             {% endfor %}
-        {% endif %}
-   <link rel="alternate" type="application/atom+xml" title="Latests Blog Posts" href="{% url blog:feed %}" />
-    {% endblock %}
+        {% endif %}  {% endblock %}
   {% endblock %}
 
   {% block style %}
@@ -44,9 +42,9 @@
     </div> <!-- /#skip-to -->
 
     <div id="header">
-        <a href="{% url blog:feed %}"  id="header-feedlink">Atom Feed</a>
+        <a href=""  id="header-feedlink">Atom Feed</a>
     	<div id="header-inner">
-    	    <h1>Flagon <em>with the</em> Dragon</h1>
+    	    <h1>Lists of <em>Westeros</em></h1>
     	</div> <!-- /#header-inner -->
 	</div> <!-- /#header -->
 
@@ -56,18 +54,17 @@
 			<a href="#navigation"></a>
 			<ul id="navlinks">
 			{% block navlinks %}
-				<li><a href="{% url site-index %}">Home</a></li>
-                <li><a href="{% url blog:archive-list %}">Archive</a></li>
-                <li><a href="{% url blog:tag-list %}">Tags</a></li>
-                <li><a href="/wiki/">Gaming Wiki</a></li>
+				<li><a href="">Home</a></li>
+                <li><a href="">Archive</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Gaming Wiki</a></li>
                 {% if request.user.is_authenticated %}
-                    <li><a href="{% url account:logout %}">Logout</a></li>
-                    <li><a href="{% url account:index %}">Profile</a></li>
-                    <li><a href="{% url admin:index %}">Admin</a></li>
+                    <li><a href="">Logout</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Admin</a></li>
                 {% else %}
-                    <li><a href="{% url account:login-form %}">Login</a></li>
+                    <li><a href="">Login</a></li>
                 {% endif %}
-                <li><a href="{% url blog:switch-mobile %}">Mobile View</a></li>
                 {% endblock %}
 			</ul>
 		</div>
@@ -123,7 +120,9 @@
 	<div id="footer">
 		<div id="footer-inner">
 			{%  block footer %}
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Flagon with the Dragon</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="www.flagonwiththedragon.com" property="cc:attributionName" rel="cc:attributionURL">Scott Turnbull</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="www.flagonwiththedragon.com" rel="dct:source">www.flagonwiththedragon.com</a>.
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lists Westeros</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Streamweaver/Westeros" property="cc:attributionName" rel="cc:attributionURL">Scott Turnbull</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/Streamweaver/Westeros" rel="dct:source">https://github.com/Streamweaver/Westerosm</a>.</p>
+                <p>Westeros and A Song of Ice and Fire are copyright George RR Martin.</p>
+                <p>A Song of Ice and Fire RGP is published by Green Ronin.</p>
             {% endblock %}
 	    </div> <!-- /#footer-inner -->
 	</div><!-- /#footer -->

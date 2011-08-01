@@ -14,6 +14,7 @@
 # limitations under the License.
 
 from django.conf.urls.defaults import *
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -29,4 +30,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
+    url(r'', include('social_auth.urls', namespace="socialauth")),
+    url(r'house/', include('westeros.houses.urls', namespace='house')),
 )
+
+urlpatterns += staticfiles_urlpatterns()

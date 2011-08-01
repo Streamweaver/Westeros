@@ -142,7 +142,7 @@ class Founding(models.Model):
     period_help = "Name of the age the house was founded in."
     period = models.CharField(max_length=2, choices=PERIODS, help_text=period_help)
 
-    events_help = "Number of significan events in the houses founding."
+    events_help = "Number of significant events in the houses founding."
     events = models.IntegerField(default=0, help_text=events_help)
 
 class BaseAttributes(HouseAttributes):
